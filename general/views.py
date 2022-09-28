@@ -14,9 +14,12 @@ def holamundo(request):
 
 
 def precios(request):
+   lista=["1000 users included!","2 GB of storage","Email support","Help center access"]
+
    titulo = "Precios"
    context = {
-      'titulo': titulo
+      'titulo': titulo,
+      'lista':lista
    }
 
    return render(request, 'precios.html', context)
