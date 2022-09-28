@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from general.views import holamundo
+from general.views import holamundo, precios
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', holamundo , name="inicio"),
+    path('precios/', precios, name="precio")
 ]
