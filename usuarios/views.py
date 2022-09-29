@@ -1,4 +1,3 @@
-from multiprocessing import context
 from django.shortcuts import redirect, render
 from usuarios.forms import UsuarioForm
 
@@ -19,7 +18,7 @@ def usuarios(request):
 def usuarios_crear(request):
 
     if request.method == 'POST':
-        form= UsuarioForm(request.POST)
+        form = UsuarioForm(request.POST)
         if form.is_valid():
             form.save()
             print("El usuario se guardo correctamente")
